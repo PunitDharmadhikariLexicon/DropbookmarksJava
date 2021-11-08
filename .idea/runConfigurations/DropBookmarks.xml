@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="DropBookmarks" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="com.udemy.DropBookmarksApplication" />
+    <module name="DropBookmarks" />
+    <option name="PROGRAM_PARAMETERS" value="server config.yml" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
