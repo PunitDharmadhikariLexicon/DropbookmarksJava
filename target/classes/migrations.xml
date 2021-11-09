@@ -21,4 +21,38 @@
         </createTable>
         <comment>A script to create users table</comment>
     </changeSet>
+
+    <changeSet id="2" author="Punit">
+        <createTable tableName="bookmarks">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="name" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="url" type="varchar(1024)">
+                <constraints nullable="false" />
+            </column>
+            <column name="description" type="varchar(2048)" />
+            <column name="user_id" type="bigint">
+                <constraints nullable="false" foreignKeyName="fk_users_id" referencedTableName="users" referencedColumnNames="id" />
+            </column>
+        </createTable>
+        <comment>A script to create a bookmarks table</comment>
+    </changeSet>
+
+    <changeSet id="3" author="Punit" context="DEV">
+        <insert tableName="users">
+            <column name="id" value="1" />
+            <column name="username" value="udemy" />
+            <column name="password" value="p@ssw0rd" />
+        </insert>
+        <rollback>
+            <delete tableName="users">
+                <where>
+                    id=1
+                </where>
+            </delete>
+        </rollback>
+    </changeSet>
 </databaseChangeLog>

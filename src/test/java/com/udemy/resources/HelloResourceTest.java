@@ -52,18 +52,18 @@ public class HelloResourceTest {
 
     }
 
-    @Test
-    public void testGetGreeting() {
-        String expected = "Hello world";
-        String actual = RULE.getJerseyTest().target("/hello").request(MediaType.TEXT_PLAIN).get(String.class);
-        assertEquals(expected, actual);
-//        fail("Not implemented");
-    }
-
-    @Test
-    public void testGetSecuredGreeting() {
-        String expected = "Hello secured world";
-        String actual = RULE.getJerseyTest().target("/hello/secured").request(MediaType.TEXT_PLAIN).get(String.class);
-        assertEquals(expected, actual);
-    }
+//    @Test
+//    public void testGetGreeting() {
+//        String expected = "Hello world";
+//        String actual = RULE.getJerseyTest().target("/hello").request(MediaType.TEXT_PLAIN).get(String.class);
+//        assertEquals(expected, actual);
+////        fail("Not implemented");
+//    }
+//
+//    @Test
+//    public void testGetSecuredGreeting() {
+//        String expected = "Hello secured world";
+//        String actual = RULE.getJerseyTest().target("/hello/secured").request(MediaType.TEXT_PLAIN).get(String.class);
+//        assertEquals(expected, actual);
+//    }
 }
